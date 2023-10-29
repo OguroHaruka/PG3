@@ -1,20 +1,35 @@
 #include <stdio.h>
+#include <windows.h>
+#include <time.h>
 
-int total = 0;
+typedef void (*PFunc)(int*);
+void WinResult(int* s) {
+	printf("“–‚½‚è\n");
+}
+void LoseResult(int* s) {
+	printf("‚Í‚¸‚ê\n");
+}
 
-int Recusive(int time,int num,int n) {
-	
-	if (time <= 0) {
-		printf("‡Œv\n");
-		printf("%d %d\n", total,n*1072);
-		return (0);
-	}
-	total += num;
-	printf("%d ", num);
-	printf("%d\n", (n+1) * 1072);
-	return (time * Recusive(time - 1,num*2-50,n+1));
+void setTimeout(PFunc p, int second) {
+	Sleep(second * 1000);
+	p(&second);
 }
 
 int main(void) {
-	Recusive(8, 100, 0);
+	srand(time(nullptr));
+	int dice;
+	dice = rand() % 6 + 1;
+	int number;
+	printf("”¼‚©’š‚©?\n");
+	scanf_s("%d", &number);
+	PFunc p;
+	if (dice % 2 == number % 2) {
+		p = WinResult;
+		setTimeout(p, 3);
+	}
+	else {
+		p = LoseResult;
+		setTimeout(p, 3);
+	}
+	return 0;
 }
