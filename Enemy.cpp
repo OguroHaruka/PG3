@@ -9,7 +9,6 @@ void(Enemy::* Enemy::phaseTable[])() = {
 void Enemy::Update()
 {
 	(this->*Enemy::phaseTable[phase_])();
-	static_cast<size_t>(phase_);
 }
 
 void Enemy::Approach()
