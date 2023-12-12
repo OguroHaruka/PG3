@@ -128,10 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Min.cpp" />
+    <ClCompile Include="Compare.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Min.h" />
+    <ClInclude Include="Compare.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
