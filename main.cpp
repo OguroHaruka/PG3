@@ -9,7 +9,7 @@ int main(void) {
 	Compare<int, double>e(10, 20.0);
 	Compare<float, double>f(10.0f, 20.0);
 
-	printf("%f\n", a.Min());
+	printf("%d\n", a.Min());
 	printf("%f\n", b.Min());
 	printf("%lf\n", c.Min());
 	printf("%d\n", d.Min());
