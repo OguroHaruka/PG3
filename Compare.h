@@ -1,22 +1,19 @@
 #pragma once
-template<typename T>
+template<typename T1,typename T2>
 class Compare
 {
 public:
 
-	Compare(T x, T y) :x(x), y(y){}
+	Compare(T1 x, T2 y) :x(x), y(y){}
 
-	T Min();
-private:
-	T x;
-	T y;
-};
+	T1 Min() {
 
-template<typename T>
-inline T Compare<T>::Min()
-{
-	if (x < y) {
-		return x;
+		if (x < y) {
+			return x;
+		}
+		else { return y; }
 	}
-	else { return y; }
-}
+private:
+	T1 x;
+	T2 y;
+};
